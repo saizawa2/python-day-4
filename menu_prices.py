@@ -1,20 +1,23 @@
 menu = {
+    "Drinks": 4,
     "Burger": 12,
-    "Fries": 5,
-    "Drinks": 5
+    "Fries": 5
 }
 
-for item in menu:
-    print(item, ": $", menu[item])
+print("Drinks: $4")
+print("Burger: $12")
+print("Fries: $5")
 
-choice = input("Enter an item: ")
+choice = input("Enter an item: ").lower()
 
-found = False
+if choice == "drinks":
+    print("Drinks: $4")
 
-for item in menu:
-    if choice == item:
-        print(item, ": $", menu[item])
-        found = True
+elif choice == "burger":
+    print("Burger: $12")
 
-if found == False:
+elif choice == "fries":
+    print("Fries: $5")
+
+else:
     print("Item is not on the menu.")
